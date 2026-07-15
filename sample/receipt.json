@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "access": "free_public_repository_sample",
+  "records_returned": 10,
+  "selection": "Deterministic one-per-preferred-state sample, then stable national-order fill",
+  "edition_receipt": {
+    "schema_version": 1,
+    "generated_at": "2026-07-15T03:07:22.152Z",
+    "source_catalog_url": "https://data.cms.gov/data.json",
+    "source_catalog_sha256": "2b557d9fc18d8d1788ec4722f1f5e7f8e35157b8b54190f76b255ddd95d1864e",
+    "sources": {
+      "physician": {
+        "current": {
+          "url": "https://data.cms.gov/sites/default/files/2026-07/05229e67-ed9e-4bb8-9009-58f9151d099d/PendingInitialLandTsPhysicians_20260713.csv",
+          "date": "2026-07-13",
+          "filename": "PendingInitialLandTsPhysicians_20260713.csv",
+          "rows": 8173,
+          "sha256": "9b9b792f6b76432aa6a71bc156667c4d8c53460455a35be85f4405d938868b00"
+        },
+        "previous": {
+          "url": "https://data.cms.gov/sites/default/files/2026-07/40f92212-f206-44c0-963e-ae9675f32032/PendingInitialLandTsPhysicians_20260709.csv",
+          "date": "2026-07-09",
+          "filename": "PendingInitialLandTsPhysicians_20260709.csv",
+          "rows": 8253,
+          "sha256": "d1bb62c3af7cd2d1a9c2c35eeb5405870e323829cddb19f33461ec61719bafde"
+        },
+        "newly_added_npis": 1049
+      },
+      "non_physician": {
+        "current": {
+          "url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv",
+          "date": "2026-07-13",
+          "filename": "PendingInitialLandTsNonPhysicians_20260713.csv",
+          "rows": 6393,
+          "sha256": "d82021d4ca4254807b245516ad7487c62631d52f7ff61234e353ec593bc51375"
+        },
+        "previous": {
+          "url": "https://data.cms.gov/sites/default/files/2026-07/97350b88-416a-4a92-abe5-8c74f4be7414/PendingInitialLandTsNonPhysicians_20260709.csv",
+          "date": "2026-07-09",
+          "filename": "PendingInitialLandTsNonPhysicians_20260709.csv",
+          "rows": 6289,
+          "sha256": "b051e215bc7834ca8371544cccdd394ed4af706e31949b7cd7b7f55b3259de34"
+        },
+        "newly_added_npis": 714
+      }
+    },
+    "newly_added_unique_npis": 1763,
+    "nppes_lookups_attempted": 1763,
+    "nppes_lookups_succeeded": 1763,
+    "nppes_lookup_failures": 0,
+    "selected_behavioral_health_records_national": 211,
+    "eligible_records_after_state_filter": 211,
+    "state_filter": [],
+    "by_state": {
+      "AL": 3,
+      "CA": 31,
+      "CO": 9,
+      "CT": 5,
+      "DC": 1,
+      "FL": 7,
+      "GA": 4,
+      "HI": 3,
+      "IA": 1,
+      "ID": 2,
+      "IL": 6,
+      "IN": 2,
+      "KS": 1,
+      "KY": 1,
+      "LA": 1,
+      "MA": 3,
+      "MD": 4,
+      "MI": 6,
+      "MN": 3,
+      "MO": 7,
+      "MS": 1,
+      "MT": 2,
+      "NC": 5,
+      "ND": 1,
+      "NE": 2,
+      "NJ": 5,
+      "NM": 8,
+      "NV": 2,
+      "NY": 7,
+      "OH": 8,
+      "OK": 3,
+      "OR": 5,
+      "PA": 7,
+      "RI": 4,
+      "SC": 1,
+      "TN": 2,
+      "TX": 23,
+      "UT": 6,
+      "VA": 7,
+      "VT": 2,
+      "WA": 7,
+      "WI": 3
+    },
+    "by_focus": {
+      "Marriage and family therapist": 45,
+      "Mental health counselor": 84,
+      "Professional counselor": 72,
+      "Psychologist": 10
+    },
+    "taxonomy_codes": {
+      "101YM0800X": "Mental health counselor",
+      "261QM0801X": "Mental health clinic",
+      "251S00000X": "Community / behavioral health",
+      "101YP2500X": "Professional counselor",
+      "103K00000X": "Behavior analyst",
+      "106H00000X": "Marriage and family therapist",
+      "103T00000X": "Psychologist",
+      "261QM0850X": "Adult mental health clinic"
+    },
+    "pending_status": "First-time Medicare enrollment application pending Medicare Administrative Contractor processing",
+    "limitations": "Pending does not mean approved, enrolled, credentialed, licensed, newly opened, available, interested, or ready to buy. Public NPPES contact fields may be old, shared, or operational. Verify every record before relying on it."
+  }
+}

@@ -1,0 +1,38 @@
+name: Refresh public pending Medicare sample
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 20 * * 1,4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-public-pending-medicare-sample
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run sample:build
+      - name: Commit current sample when evidence changed
+        run: |
+          if git diff --quiet -- sample; then
+            echo "Public sample is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sample
+          git commit -m "Refresh public pending Medicare sample"
+          git push origin HEAD:main

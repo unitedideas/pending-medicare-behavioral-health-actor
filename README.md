@@ -4,7 +4,9 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 > **Pending is not approved.** A row means a first-time Medicare enrollment application appeared in CMS's pending file. It does not prove enrollment, credentialing, licensure, a new practice, service availability, interest, or buying intent.
 
-[Run the free 10-row preview on Apify](https://apify.com/actablesite/pending-medicare-behavioral-health-actor) with the default input. The same hosted Actor delivers the complete current edition after an intentional `$12` event authorization.
+[Inspect the current 10-row sample directly in this repository](sample/preview.csv), with no account or token. Its [source receipt](sample/receipt.json) records the exact CMS snapshots, hashes, NPPES lookup success, taxonomy boundary, counts, and limitations.
+
+[Duplicate the fixed free task on Apify](https://console.apify.com/create-task-from-example/XpbXjWokmaugKKSMe) when you want a hosted preview with an optional state filter. The task keeps `preview=true` fixed and cannot silently become a paid run. The same hosted Actor offers the complete current edition only after an intentional `$12` event authorization.
 
 ## Choose access intentionally
 
@@ -12,6 +14,8 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 - **Full current edition — $12 once per run, plus buyer-paid Apify usage.** Get every validated behavioral-health row added since the prior CMS publication.
 
 The Actor never turns a preview into a paid run. Set `preview` to `false` only when you intend to authorize the full-edition event.
+
+The repository sample refreshes automatically after the twice-weekly CMS publication cadence. Refresh failures stop without replacing the last validated sample.
 
 ## What the edition answers
 
