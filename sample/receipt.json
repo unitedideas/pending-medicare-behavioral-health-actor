@@ -5,9 +5,9 @@
   "selection": "Deterministic one-per-preferred-state sample, then stable national-order fill",
   "edition_receipt": {
     "schema_version": 1,
-    "generated_at": "2026-07-15T03:12:06.927Z",
+    "generated_at": "2026-07-15T23:32:51.560Z",
     "source_catalog_url": "https://data.cms.gov/data.json",
-    "source_catalog_sha256": "2b557d9fc18d8d1788ec4722f1f5e7f8e35157b8b54190f76b255ddd95d1864e",
+    "source_catalog_sha256": "fb78cb45b1b50c59ea8d6a12d441c72a4bb706d093c06abdcadb2f4a050fb84d",
     "sources": {
       "physician": {
         "current": {
