@@ -1,0 +1,16 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Pending Medicare behavioral-health delivery",
+  "properties": {
+    "dataset": {
+      "type": "string",
+      "title": "Delivered records",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "output": {
+      "type": "string",
+      "title": "Fulfillment receipt",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+    }
+  }
+}

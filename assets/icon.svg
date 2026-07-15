@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Pending Medicare behavioral health signal</title>
+  <desc id="desc">A document with a clock and a calm teal signal line.</desc>
+  <rect width="512" height="512" rx="112" fill="#0B3558"/>
+  <path d="M132 84h190l70 70v274H132z" fill="#F7FBFF"/>
+  <path d="M322 84v70h70" fill="#C9E8EF"/>
+  <path d="M174 242h56l24-46 42 91 28-45h38" fill="none" stroke="#0A8F8A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="318" cy="353" r="76" fill="#F5C451" stroke="#0B3558" stroke-width="18"/>
+  <path d="M318 312v45l31 20" fill="none" stroke="#0B3558" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

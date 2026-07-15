@@ -1,0 +1,26 @@
+{
+  "title": "Pending Medicare behavioral-health edition",
+  "description": "Preview 10 rows free, or request the complete current edition for one $12 event plus buyer-paid Apify usage.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "preview": {
+      "title": "Free preview",
+      "type": "boolean",
+      "description": "Keep enabled for a deterministic 10-row preview. Disable only when you intend to authorize the $12 full-edition event.",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "states": {
+      "title": "States",
+      "type": "array",
+      "description": "Optional two-letter state or territory codes. Leave empty for national results.",
+      "default": [],
+      "editor": "stringList",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z]{2}$"
+      }
+    }
+  }
+}

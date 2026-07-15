@@ -1,0 +1,28 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Newly added pending applicants",
+      "transformation": {
+        "fields": [
+          "npi",
+          "first_name",
+          "last_name",
+          "credential",
+          "focus",
+          "taxonomy_code",
+          "city",
+          "state",
+          "telephone",
+          "pending_added_date",
+          "pending_file"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}

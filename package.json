@@ -1,0 +1,17 @@
+{
+  "name": "pending-medicare-behavioral-health-actor",
+  "version": "1.0.0",
+  "description": "Twice-weekly behavioral-health NPIs newly added to CMS pending first-time Medicare enrollment files.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "apify": "^3.4.4"
+  },
+  "license": "MIT"
+}

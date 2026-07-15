@@ -1,0 +1,4 @@
+node_modules/
+storage/
+work/
+.DS_Store
