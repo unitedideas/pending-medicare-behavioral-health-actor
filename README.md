@@ -6,6 +6,8 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 [Inspect the current 10-row sample directly in this repository](sample/preview.csv), with no account or token. Its [source receipt](sample/receipt.json) records the exact CMS snapshots, hashes, NPPES lookup success, taxonomy boundary, counts, and limitations.
 
+[Run the free preview in GitHub Actions](https://github.com/unitedideas/pending-medicare-behavioral-health-action) when you want the same validated sample written into a workflow without an Apify account, token, email, or payment. The Action only invokes Apify after `preview` is explicitly set to `false` with a buyer-owned token and a charge cap of at least `$12.25`.
+
 [Duplicate the fixed free task on Apify](https://console.apify.com/create-task-from-example/XpbXjWokmaugKKSMe) when you want a hosted preview with an optional state filter. The task keeps `preview=true` fixed and cannot silently become a paid run. The same [hosted Actor](https://apify.com/actablesite/pending-medicare-behavioral-health-actor) offers the complete current edition only after an intentional `$12` event authorization.
 
 ## Choose access intentionally
