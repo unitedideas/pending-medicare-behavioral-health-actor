@@ -8,10 +8,8 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 ## Choose access intentionally
 
-| Access | Delivered | Charge |
-| --- | --- | --- |
-| Free preview | 10 current rows, selected deterministically across states | No edition charge |
-| Full current edition | Every validated behavioral-health row added since the prior CMS publication | **$12 once per run**, plus buyer-paid Apify usage |
+- **Free preview — no edition charge.** Get 10 current rows selected deterministically across states.
+- **Full current edition — $12 once per run, plus buyer-paid Apify usage.** Get every validated behavioral-health row added since the prior CMS publication.
 
 The Actor never turns a preview into a paid run. Set `preview` to `false` only when you intend to authorize the full-edition event.
 
