@@ -37,6 +37,12 @@ test("scheduled sample refresh validates before committing directly to main", as
   assert.match(workflow, /npm test/);
   assert.match(workflow, /npm run sample:build/);
   assert.match(workflow, /git push origin HEAD:main/);
+  assert.match(workflow, /Publish dated public sample release/);
+  assert.match(workflow, /tag="sample-\$\{current_date\}"/);
+  assert.match(workflow, /gh release create/);
+  assert.match(workflow, /gh release upload/);
+  assert.match(workflow, /sample\/preview\.csv sample\/preview\.json sample\/receipt\.json/);
+  assert.match(workflow, /complete validated edition is \$12 plus buyer-paid Apify usage/);
   assert.doesNotMatch(workflow, /secrets\./);
   assert.match(builder, /buildEdition\(\)/);
   assert.match(builder, /selectPreview/);
