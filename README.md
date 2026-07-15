@@ -4,6 +4,8 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 > **Pending is not approved.** A row means a first-time Medicare enrollment application appeared in CMS's pending file. It does not prove enrollment, credentialing, licensure, a new practice, service availability, interest, or buying intent.
 
+[Run the free 10-row preview on Apify](https://apify.com/actablesite/pending-medicare-behavioral-health-actor) with the default input. The same hosted Actor delivers the complete current edition after an intentional `$12` event authorization.
+
 ## Choose access intentionally
 
 | Access | Delivered | Charge |
