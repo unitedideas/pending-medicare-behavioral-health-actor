@@ -49,7 +49,7 @@ jobs:
           notes="$(printf 'Free 10-row public sample of behavioral-health NPIs newly present in the %s CMS pending first-time Medicare enrollment files versus %s. The validated national edition selected %s records after %s successful NPPES lookups.\n\nPending means contractor review, not Medicare approval, licensure, credentialing, availability, or buying intent. Inspect receipt.json before relying on a row.\n\nThe complete validated edition is $12 plus buyer-paid Apify usage: https://apify.com/actablesite/pending-medicare-behavioral-health-actor' "$current_date" "$prior_date" "$national_count" "$lookup_count")"
           if gh release view "$tag" >/dev/null 2>&1; then
             gh release edit "$tag" --title "$title" --notes "$notes"
-            gh release upload "$tag" sample/preview.csv sample/preview.json sample/receipt.json sample/feed.xml sample/feed.json --clobber
+            echo "The dated release already exists; preserve its asset download counters."
           else
             gh release create "$tag" sample/preview.csv sample/preview.json sample/receipt.json sample/feed.xml sample/feed.json --target main --title "$title" --notes "$notes"
           fi

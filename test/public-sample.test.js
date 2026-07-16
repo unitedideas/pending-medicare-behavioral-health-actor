@@ -65,7 +65,9 @@ test("scheduled sample refresh validates before committing directly to main", as
   assert.match(workflow, /Publish dated public sample release/);
   assert.match(workflow, /tag="sample-\$\{current_date\}"/);
   assert.match(workflow, /gh release create/);
-  assert.match(workflow, /gh release upload/);
+  assert.match(workflow, /preserve its asset download counters/);
+  assert.doesNotMatch(workflow, /gh release upload/);
+  assert.doesNotMatch(workflow, /--clobber/);
   assert.match(workflow, /sample\/preview\.csv sample\/preview\.json sample\/receipt\.json sample\/feed\.xml sample\/feed\.json/);
   assert.match(workflow, /complete validated edition is \$12 plus buyer-paid Apify usage/);
   assert.doesNotMatch(workflow, /secrets\./);
