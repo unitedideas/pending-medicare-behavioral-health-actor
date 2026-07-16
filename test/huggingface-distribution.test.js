@@ -5,8 +5,9 @@ import test from "node:test";
 const root = new URL("../distribution/huggingface/pending-medicare-provider-enrollment-data/", import.meta.url);
 
 test("Hugging Face distribution is dated, aggregate-complete, and honest about the paid boundary", async () => {
-  const [card, states, specialties, receipt] = await Promise.all([
+  const [card, license, states, specialties, receipt] = await Promise.all([
     readFile(new URL("README.md", root), "utf8"),
+    readFile(new URL("LICENSE", root), "utf8"),
     readFile(new URL("state_counts.csv", root), "utf8"),
     readFile(new URL("specialty_counts.csv", root), "utf8"),
     readFile(new URL("../sample/receipt.json", import.meta.url), "utf8").then(JSON.parse),
@@ -31,4 +32,8 @@ test("Hugging Face distribution is dated, aggregate-complete, and honest about t
   assert.match(card, /\*\*\$12 once per run\*\*/);
   assert.match(card, /buyer-paid Apify platform usage/);
   assert.match(card, /1,763 of 1,763 NPPES lookups/);
+  assert.match(card, /license_name: us-government-public-data/);
+  assert.match(card, /license_link: LICENSE/);
+  assert.match(license, /No exclusive rights are asserted/);
+  assert.match(license, /Pending enrollment\s+does not mean approved/);
 });

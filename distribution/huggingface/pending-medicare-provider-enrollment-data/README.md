@@ -1,6 +1,8 @@
 ---
 pretty_name: Pending Medicare Provider Enrollment Data
 license: other
+license_name: us-government-public-data
+license_link: LICENSE
 tags:
   - tabular
   - medicare
