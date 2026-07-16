@@ -10,14 +10,17 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 [Run the free preview in GitHub Actions](https://github.com/unitedideas/pending-medicare-behavioral-health-action) when you want the same validated sample written into a workflow without an Apify account, token, email, or payment. The Action only invokes Apify after `preview` is explicitly set to `false` with a buyer-owned token and a charge cap of at least `$12.25`.
 
-[Duplicate the fixed free task on Apify](https://console.apify.com/create-task-from-example/XpbXjWokmaugKKSMe) when you want a hosted preview with an optional state filter. The task keeps `preview=true` fixed and cannot silently become a paid run. The same [hosted Actor](https://apify.com/actablesite/pending-medicare-behavioral-health-actor) offers the complete current edition only after an intentional `$12` event authorization.
+[Buy the complete validated national CSV for $12 once](https://buy.stripe.com/28EcMY3vQ3bn0921Un6oo0k?client_reference_id=github_actor_readme&utm_source=github&utm_medium=repository&utm_campaign=pending_medicare_csv) when you need every selected row without an Apify account, subscription, or separate platform charge. Private encrypted access normally activates within 15 minutes after payment.
+
+[Duplicate the fixed free task on Apify](https://console.apify.com/create-task-from-example/XpbXjWokmaugKKSMe) when you want a hosted preview with an optional state filter. The task keeps `preview=true` fixed and cannot silently become a paid run. The [hosted Actor](https://apify.com/actablesite/pending-medicare-behavioral-health-actor) remains the optional buyer-funded route for state filters and JSON, Excel, XML, or RSS exports.
 
 ## Choose access intentionally
 
 - **Free preview — no edition charge.** Get 10 current rows selected deterministically across states.
-- **Full current edition — $12 once per run, plus buyer-paid Apify usage.** Get every validated behavioral-health row added since the prior CMS publication.
+- **Complete national CSV — $12 once.** Get every validated behavioral-health row added since the prior CMS publication, with no subscription or separate platform charge.
+- **Custom hosted run — optional buyer-funded Apify usage.** Use the Actor when you need state filters or alternate export formats.
 
-The Actor never turns a preview into a paid run. Set `preview` to `false` only when you intend to authorize the full-edition event.
+The direct CSV purchase does not invoke Apify. The Actor never turns a preview into a paid run; set `preview` to `false` only when you intentionally choose the custom hosted route.
 
 The repository sample refreshes automatically after the twice-weekly CMS publication cadence. Refresh failures stop without replacing the last validated sample.
 

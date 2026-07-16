@@ -25,6 +25,12 @@ test("public repository sample is current, source-receipted, and free of paid ex
   assert.match(sampleReadme, /cannot start or authorize a paid run/);
   assert.match(rootReadme, /sample\/preview\.csv/);
   assert.match(rootReadme, /create-task-from-example\/XpbXjWokmaugKKSMe/);
+  assert.match(rootReadme, /Buy the complete validated national CSV for \$12 once/);
+  assert.match(rootReadme, /client_reference_id=github_actor_readme/);
+  assert.match(rootReadme, /utm_source=github&/);
+  assert.match(rootReadme, /without an Apify account, subscription, or separate platform charge/);
+  assert.match(rootReadme, /normally activates within 15 minutes/);
+  assert.match(rootReadme, /optional buyer-funded route/);
 });
 
 test("scheduled sample refresh validates before committing directly to main", async () => {
