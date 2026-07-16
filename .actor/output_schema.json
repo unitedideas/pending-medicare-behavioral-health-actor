@@ -1,6 +1,6 @@
 {
   "actorOutputSchemaVersion": 1,
-  "title": "Pending Medicare behavioral-health delivery",
+  "title": "Pending Medicare provider enrollment delivery",
   "properties": {
     "dataset": {
       "type": "string",

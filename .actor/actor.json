@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "pending-medicare-behavioral-health-applicants",
-  "title": "New Pending Medicare Behavioral Health Applicants",
+  "title": "Pending Medicare Provider Enrollment Data",
   "version": "1.0",
   "buildTag": "latest",
   "dockerfile": "../Dockerfile",

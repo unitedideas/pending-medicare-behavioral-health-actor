@@ -1,6 +1,6 @@
 {
   "actorKeyValueStoreSchemaVersion": 1,
-  "title": "Pending Medicare fulfillment receipt",
+  "title": "Pending Medicare provider enrollment receipt",
   "description": "Source-linked validation and fulfillment evidence for the delivered preview or paid current edition.",
   "collections": {
     "fulfillment": {

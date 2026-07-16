@@ -186,7 +186,7 @@
   },
   "views": {
     "overview": {
-      "title": "Newly added pending applicants",
+      "title": "Pending Medicare provider enrollment data",
       "transformation": {
         "fields": [
           "npi",

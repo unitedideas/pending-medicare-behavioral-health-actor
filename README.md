@@ -1,4 +1,4 @@
-# New Pending Medicare Behavioral Health Applicants
+# Pending Medicare Provider Enrollment Data
 
 Find behavioral-health clinicians newly added to CMS's **pending first-time Medicare enrollment** files since the prior publication. Built for credentialing, medical-billing, EHR, provider-network, and healthcare research teams.
 
