@@ -1,6 +1,189 @@
 {
   "actorSpecification": 1,
-  "fields": {},
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "npi": {
+        "type": "string",
+        "title": "NPI",
+        "description": "Ten-digit National Provider Identifier from the CMS pending file and NPPES Registry.",
+        "pattern": "^[0-9]{10}$",
+        "example": "1234567890"
+      },
+      "first_name": {
+        "type": "string",
+        "title": "First name",
+        "description": "Provider first name reported by NPPES, falling back to the CMS pending-file name when needed.",
+        "example": "JORDAN"
+      },
+      "last_name": {
+        "type": "string",
+        "title": "Last name",
+        "description": "Provider last name reported by NPPES, falling back to the CMS pending-file name when needed.",
+        "example": "TAYLOR"
+      },
+      "credential": {
+        "type": "string",
+        "title": "Credential",
+        "description": "Credential text currently reported in the public NPPES record; it may be blank or stale.",
+        "example": "LPC"
+      },
+      "enumeration_type": {
+        "type": "string",
+        "title": "NPI enumeration type",
+        "description": "NPPES entity type for the NPI, typically NPI-1 for an individual clinician.",
+        "example": "NPI-1"
+      },
+      "focus": {
+        "type": "string",
+        "title": "Behavioral-health focus",
+        "description": "Plain-language label for the matched conservative behavioral-health taxonomy.",
+        "example": "Mental health counselor"
+      },
+      "taxonomy_code": {
+        "type": "string",
+        "title": "Taxonomy code",
+        "description": "Matched healthcare provider taxonomy code disclosed in NPPES.",
+        "pattern": "^[0-9A-Z]{10}$",
+        "example": "101YM0800X"
+      },
+      "taxonomy_description": {
+        "type": "string",
+        "title": "Taxonomy description",
+        "description": "NPPES description associated with the matched taxonomy code.",
+        "example": "Counselor, Mental Health"
+      },
+      "address_1": {
+        "type": "string",
+        "title": "Practice address line 1",
+        "description": "Public NPPES practice-location address line; verify before operational use.",
+        "example": "100 MAIN ST"
+      },
+      "address_2": {
+        "type": "string",
+        "title": "Practice address line 2",
+        "description": "Optional second public NPPES practice-location address line.",
+        "example": "STE 200"
+      },
+      "city": {
+        "type": "string",
+        "title": "City",
+        "description": "City from the public NPPES practice-location address.",
+        "example": "AUSTIN"
+      },
+      "state": {
+        "type": "string",
+        "title": "State or territory",
+        "description": "Two-letter state or territory code from the NPPES practice location.",
+        "pattern": "^[A-Z]{2}$",
+        "example": "TX"
+      },
+      "postal_code": {
+        "type": "string",
+        "title": "Postal code",
+        "description": "Postal code from the public NPPES practice-location address.",
+        "example": "787011234"
+      },
+      "telephone": {
+        "type": "string",
+        "title": "Telephone",
+        "description": "Public NPPES practice-location telephone; it may be old or shared.",
+        "example": "5125550100"
+      },
+      "npi_enumeration_date": {
+        "type": "string",
+        "title": "NPI enumeration date",
+        "description": "NPI enumeration date currently reported by NPPES, in YYYY-MM-DD format when available.",
+        "example": "2024-01-15"
+      },
+      "npi_last_updated": {
+        "type": "string",
+        "title": "NPI last updated",
+        "description": "Most recent NPPES update date, in YYYY-MM-DD format when available.",
+        "example": "2026-06-30"
+      },
+      "npi_status": {
+        "type": "string",
+        "title": "NPI status",
+        "description": "NPI status currently reported by NPPES; this is separate from Medicare enrollment status.",
+        "example": "A"
+      },
+      "pending_status": {
+        "type": "string",
+        "title": "Pending-status definition",
+        "description": "Explicit boundary that the first-time Medicare enrollment application remains under contractor review and is not approved.",
+        "example": "First-time Medicare enrollment application pending Medicare Administrative Contractor processing; not approved or enrolled."
+      },
+      "pending_file": {
+        "type": "string",
+        "title": "CMS pending file",
+        "description": "CMS source file in which the NPI newly appeared.",
+        "enum": ["physician", "non_physician"],
+        "example": "non_physician"
+      },
+      "pending_added_date": {
+        "type": "string",
+        "title": "Current snapshot date",
+        "description": "Publication date of the newest CMS pending snapshot used for this row.",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "example": "2026-07-13"
+      },
+      "prior_snapshot_date": {
+        "type": "string",
+        "title": "Prior snapshot date",
+        "description": "Publication date of the immediately preceding CMS pending snapshot used for the diff.",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+        "example": "2026-07-09"
+      },
+      "cms_pending_source_url": {
+        "type": "string",
+        "title": "CMS source URL",
+        "description": "Direct official CMS URL for the current pending-file snapshot.",
+        "format": "uri",
+        "example": "https://data.cms.gov/provider-characteristics/medicare-provider-supplier-enrollment/pending-initial-physician"
+      },
+      "nppes_registry_url": {
+        "type": "string",
+        "title": "NPPES Registry URL",
+        "description": "Direct public NPPES provider-view URL for this NPI.",
+        "format": "uri",
+        "example": "https://npiregistry.cms.hhs.gov/provider-view/1234567890"
+      },
+      "limitations": {
+        "type": "string",
+        "title": "Material limitations",
+        "description": "Required limitations for interpreting the pending-enrollment and NPPES data.",
+        "example": "Pending does not mean approved. Verify every record before operational use."
+      }
+    },
+    "required": [
+      "npi",
+      "first_name",
+      "last_name",
+      "credential",
+      "enumeration_type",
+      "focus",
+      "taxonomy_code",
+      "taxonomy_description",
+      "address_1",
+      "address_2",
+      "city",
+      "state",
+      "postal_code",
+      "telephone",
+      "npi_enumeration_date",
+      "npi_last_updated",
+      "npi_status",
+      "pending_status",
+      "pending_file",
+      "pending_added_date",
+      "prior_snapshot_date",
+      "cms_pending_source_url",
+      "nppes_registry_url",
+      "limitations"
+    ]
+  },
   "views": {
     "overview": {
       "title": "Newly added pending applicants",

@@ -1,0 +1,56 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Pending Medicare fulfillment receipt",
+  "description": "Source-linked validation and fulfillment evidence for the delivered preview or paid current edition.",
+  "collections": {
+    "fulfillment": {
+      "title": "Fulfillment receipt",
+      "description": "The OUTPUT record documents access level, delivered row count, source snapshots, quality gates, filters, and limitations.",
+      "key": "OUTPUT",
+      "contentTypes": ["application/json"],
+      "jsonSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "description": "Whether the requested access level was delivered successfully."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["delivered", "charge_limit_reached"],
+            "description": "Machine-readable fulfillment outcome."
+          },
+          "access": {
+            "type": "string",
+            "enum": ["free_preview", "paid_current_edition"],
+            "description": "Delivered access level when status is delivered."
+          },
+          "records_returned": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of validated dataset rows delivered."
+          },
+          "receipt": {
+            "type": "object",
+            "description": "Source hashes, snapshot dates, counts, filters, distributions, taxonomy boundary, and limitations."
+          },
+          "dataset_id": {
+            "type": "string",
+            "description": "Apify dataset identifier when records were delivered."
+          },
+          "export_formats": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Export formats available from the delivered dataset."
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable explanation when fulfillment is blocked."
+          }
+        },
+        "required": ["ok", "status", "records_returned", "receipt"]
+      }
+    }
+  }
+}
