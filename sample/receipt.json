@@ -5,7 +5,7 @@
   "selection": "Deterministic one-per-preferred-state sample, then stable national-order fill",
   "edition_receipt": {
     "schema_version": 1,
-    "generated_at": "2026-07-16T08:06:56.455Z",
+    "generated_at": "2026-07-16T08:07:58.071Z",
     "source_catalog_url": "https://data.cms.gov/data.json",
     "source_catalog_sha256": "fb78cb45b1b50c59ea8d6a12d441c72a4bb706d093c06abdcadb2f4a050fb84d",
     "sources": {
