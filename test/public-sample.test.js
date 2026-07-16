@@ -3,17 +3,20 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { LIMITATIONS, parseCsvLine } from "../src/lib.js";
 
-test("public repository sample is current, source-receipted, and free of paid execution", async () => {
-  const [csv, jsonText, receiptText, sampleReadme, rootReadme] = await Promise.all([
+test("public repository sample is current, source-receipted, feed-ready, and free of paid execution", async () => {
+  const [csv, jsonText, receiptText, rss, jsonFeedText, sampleReadme, rootReadme] = await Promise.all([
     readFile(new URL("../sample/preview.csv", import.meta.url), "utf8"),
     readFile(new URL("../sample/preview.json", import.meta.url), "utf8"),
     readFile(new URL("../sample/receipt.json", import.meta.url), "utf8"),
+    readFile(new URL("../sample/feed.xml", import.meta.url), "utf8"),
+    readFile(new URL("../sample/feed.json", import.meta.url), "utf8"),
     readFile(new URL("../sample/README.md", import.meta.url), "utf8"),
     readFile(new URL("../README.md", import.meta.url), "utf8"),
   ]);
   const csvRows = csv.trim().split("\n").map(parseCsvLine);
   const records = JSON.parse(jsonText);
   const receipt = JSON.parse(receiptText);
+  const jsonFeed = JSON.parse(jsonFeedText);
 
   assert.equal(csvRows.length, 11);
   assert.equal(records.length, 10);
@@ -22,8 +25,24 @@ test("public repository sample is current, source-receipted, and free of paid ex
   assert.equal(receipt.edition_receipt.nppes_lookups_attempted, receipt.edition_receipt.nppes_lookups_succeeded);
   assert.ok(receipt.edition_receipt.selected_behavioral_health_records_national >= 3);
   assert.equal(receipt.edition_receipt.limitations, LIMITATIONS);
+  assert.match(rss, /<rss version="2\.0"/);
+  assert.match(rss, /https:\/\/actablesite\.com\/pending-medicare-feed\.xml/);
+  assert.equal((rss.match(/<item>/g) || []).length, 10);
+  assert.match(rss, /Pending does not mean approved/);
+  assert.equal(jsonFeed.version, "https://jsonfeed.org/version/1.1");
+  assert.equal(jsonFeed.feed_url, "https://actablesite.com/pending-medicare-feed.json");
+  assert.equal(jsonFeed.items.length, 10);
+  assert.equal(jsonFeed._actablesite.validated_national_count, receipt.edition_receipt.selected_behavioral_health_records_national);
+  assert.equal(jsonFeed._actablesite.complete_edition.price, "$12 USD once");
+  assert.equal(jsonFeed._actablesite.complete_edition.no_subscription, true);
+  assert.equal(jsonFeed._actablesite.complete_edition.platform_usage_charge, false);
+  assert.match(jsonFeed._actablesite.complete_edition.checkout_url, /client_reference_id=pending_medicare_feed/);
+  assert.ok(jsonFeed.items.every((item) => item.content_text.includes("Pending does not mean approved")));
   assert.match(sampleReadme, /cannot start or authorize a paid run/);
+  assert.match(sampleReadme, /pending-medicare-feed\.xml/);
   assert.match(rootReadme, /sample\/preview\.csv/);
+  assert.match(rootReadme, /Subscribe to the free RSS feed/);
+  assert.match(rootReadme, /pending-medicare-feed\.json/);
   assert.match(rootReadme, /create-task-from-example\/XpbXjWokmaugKKSMe/);
   assert.match(rootReadme, /Buy the complete validated national CSV for \$12 once/);
   assert.match(rootReadme, /client_reference_id=github_actor_readme/);
@@ -47,7 +66,7 @@ test("scheduled sample refresh validates before committing directly to main", as
   assert.match(workflow, /tag="sample-\$\{current_date\}"/);
   assert.match(workflow, /gh release create/);
   assert.match(workflow, /gh release upload/);
-  assert.match(workflow, /sample\/preview\.csv sample\/preview\.json sample\/receipt\.json/);
+  assert.match(workflow, /sample\/preview\.csv sample\/preview\.json sample\/receipt\.json sample\/feed\.xml sample\/feed\.json/);
   assert.match(workflow, /complete validated edition is \$12 plus buyer-paid Apify usage/);
   assert.doesNotMatch(workflow, /secrets\./);
   assert.match(builder, /buildEdition\(\)/);

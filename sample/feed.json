@@ -1,0 +1,251 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Pending Medicare behavioral-health provider sample",
+  "home_page_url": "https://actablesite.com/pending-medicare-behavioral-health-data",
+  "feed_url": "https://actablesite.com/pending-medicare-feed.json",
+  "description": "Ten source-linked behavioral-health NPIs newly present in the latest CMS pending first-time Medicare enrollment files. Free public sample; pending is not approval.",
+  "language": "en-US",
+  "authors": [
+    {
+      "name": "ActableSite",
+      "url": "https://actablesite.com"
+    }
+  ],
+  "expired": false,
+  "_actablesite": {
+    "current_snapshot": "2026-07-13",
+    "prior_snapshot": "2026-07-09",
+    "validated_national_count": 211,
+    "sample_records": 10,
+    "source_receipt_url": "https://raw.githubusercontent.com/unitedideas/pending-medicare-behavioral-health-actor/main/sample/receipt.json",
+    "complete_edition": {
+      "price": "$12 USD once",
+      "checkout_url": "https://buy.stripe.com/28EcMY3vQ3bn0921Un6oo0k?client_reference_id=pending_medicare_feed&utm_source=actablesite&utm_medium=feed&utm_campaign=pending_medicare_csv",
+      "no_subscription": true,
+      "platform_usage_charge": false
+    },
+    "limitations": "Pending does not mean approved, enrolled, credentialed, licensed, newly opened, available, interested, or ready to buy. Public NPPES contact fields may be old, shared, or operational. Verify every record before relying on it."
+  },
+  "items": [
+    {
+      "id": "urn:npi:1063234672:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1063234672",
+      "title": "KARAM SKAF — Marriage and family therapist — CERRITOS, CA",
+      "content_text": "Marriage and family therapist in CERRITOS, CA. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Marriage and family therapist",
+        "CA",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1063234672",
+        "credential": "LMFT",
+        "city": "CERRITOS",
+        "state": "CA",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "106H00000X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1396671863:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1396671863",
+      "title": "KILAH SIMONDS — Professional counselor — ARLINGTON, TX",
+      "content_text": "Professional counselor in ARLINGTON, TX. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Professional counselor",
+        "TX",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1396671863",
+        "credential": "",
+        "city": "ARLINGTON",
+        "state": "TX",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YP2500X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1093038499:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1093038499",
+      "title": "KOHEI MOCHIZUKI — Mental health counselor — DAYTONA BEACH, FL",
+      "content_text": "Mental health counselor in DAYTONA BEACH, FL. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Mental health counselor",
+        "FL",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1093038499",
+        "credential": "LMHC",
+        "city": "DAYTONA BEACH",
+        "state": "FL",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YM0800X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1891514766:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1891514766",
+      "title": "VANESSA LABOUNTY — Mental health counselor — BROOKLYN, NY",
+      "content_text": "Mental health counselor in BROOKLYN, NY. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Mental health counselor",
+        "NY",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1891514766",
+        "credential": "LMHC",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YM0800X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1033667092:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1033667092",
+      "title": "JOHN MAGEE — Professional counselor — ASHEVILLE, NC",
+      "content_text": "Professional counselor in ASHEVILLE, NC. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Professional counselor",
+        "NC",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1033667092",
+        "credential": "LCMHC",
+        "city": "ASHEVILLE",
+        "state": "NC",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YP2500X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1124965793:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1124965793",
+      "title": "MARY MILLER — Mental health counselor — COUPEVILLE, WA",
+      "content_text": "Mental health counselor in COUPEVILLE, WA. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Mental health counselor",
+        "WA",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1124965793",
+        "credential": "LMHC",
+        "city": "COUPEVILLE",
+        "state": "WA",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YM0800X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1790273209:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1790273209",
+      "title": "AARON MILLS — Marriage and family therapist — BIRMINGHAM, AL",
+      "content_text": "Marriage and family therapist in BIRMINGHAM, AL. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Marriage and family therapist",
+        "AL",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1790273209",
+        "credential": "LMFT",
+        "city": "BIRMINGHAM",
+        "state": "AL",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "106H00000X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1841664141:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1841664141",
+      "title": "CRYSTAL ORTIZ — Mental health counselor — FOWLER, CA",
+      "content_text": "Mental health counselor in FOWLER, CA. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Mental health counselor",
+        "CA",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1841664141",
+        "credential": "LPCC",
+        "city": "FOWLER",
+        "state": "CA",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YM0800X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1316595051:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1316595051",
+      "title": "MICHELLE ROSENTHAL — Professional counselor — BOULDER, CO",
+      "content_text": "Professional counselor in BOULDER, CO. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Professional counselor",
+        "CO",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1316595051",
+        "credential": "LPC, LAC",
+        "city": "BOULDER",
+        "state": "CO",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YP2500X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    },
+    {
+      "id": "urn:npi:1376980631:pending:2026-07-13",
+      "url": "https://npiregistry.cms.hhs.gov/provider-view/1376980631",
+      "title": "KATHERINE FILLION — Professional counselor — CLINTON, CT",
+      "content_text": "Professional counselor in CLINTON, CT. This NPI appeared in the 2026-07-13 CMS pending first-time Medicare enrollment files and was enriched from the public NPPES Registry. Pending does not mean approved, enrolled, credentialed, licensed, available, interested, or ready to buy. Verify the source record before relying on it.",
+      "date_published": "2026-07-13T00:00:00Z",
+      "tags": [
+        "Professional counselor",
+        "CT",
+        "pending Medicare enrollment",
+        "NPI"
+      ],
+      "_actablesite": {
+        "npi": "1376980631",
+        "credential": "LPC",
+        "city": "CLINTON",
+        "state": "CT",
+        "pending_added_date": "2026-07-13",
+        "taxonomy_code": "101YP2500X",
+        "cms_pending_source_url": "https://data.cms.gov/sites/default/files/2026-07/5be97385-c8b1-420e-a56c-e2b879a965f4/PendingInitialLandTsNonPhysicians_20260713.csv"
+      }
+    }
+  ]
+}

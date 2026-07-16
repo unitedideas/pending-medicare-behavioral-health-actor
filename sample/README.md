@@ -4,8 +4,9 @@ This directory is refreshed from the two newest CMS physician and non-physician 
 
 - `preview.csv` and `preview.json` contain the same 10 deterministic records.
 - `receipt.json` records the source snapshots, hashes, row counts, NPPES lookup success, taxonomy boundary, state and specialty counts, and material limitations for the validated national edition.
+- `feed.xml` and `feed.json` publish those same 10 records as RSS 2.0 and JSON Feed 1.1 for unattended readers. The stable public endpoints are [RSS](https://actablesite.com/pending-medicare-feed.xml) and [JSON Feed](https://actablesite.com/pending-medicare-feed.json).
 
-The [latest dated GitHub release](https://github.com/unitedideas/pending-medicare-behavioral-health-actor/releases/latest) packages these same three files as versioned download assets. Release download counts are public distribution evidence; they do not prove a paid edition.
+The [latest dated GitHub release](https://github.com/unitedideas/pending-medicare-behavioral-health-actor/releases/latest) packages all five files as versioned download assets. Release download counts are public distribution evidence; they do not prove a paid edition.
 
 The sample is free. It cannot start or authorize a paid run. The complete validated edition remains a separate, intentional $12 event on Apify, plus buyer-paid platform usage.
 

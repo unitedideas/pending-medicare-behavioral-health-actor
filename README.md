@@ -6,7 +6,9 @@ Find behavioral-health clinicians newly added to CMS's **pending first-time Medi
 
 [Inspect the current 10-row sample directly in this repository](sample/preview.csv), with no account or token. Its [source receipt](sample/receipt.json) records the exact CMS snapshots, hashes, NPPES lookup success, taxonomy boundary, counts, and limitations.
 
-[Download the latest dated public-sample release](https://github.com/unitedideas/pending-medicare-behavioral-health-actor/releases/latest) for versioned CSV, JSON, and source-receipt assets. The twice-weekly refresh workflow creates one release per current CMS snapshot and updates it idempotently when the same snapshot is revalidated.
+[Subscribe to the free RSS feed](https://actablesite.com/pending-medicare-feed.xml) or [JSON Feed](https://actablesite.com/pending-medicare-feed.json) for the same 10 current source-linked records in an unattended reader. Neither feed starts a paid run or publishes the complete edition.
+
+[Download the latest dated public-sample release](https://github.com/unitedideas/pending-medicare-behavioral-health-actor/releases/latest) for versioned CSV, JSON, RSS, JSON Feed, and source-receipt assets. The twice-weekly refresh workflow creates one release per current CMS snapshot and updates it idempotently when the same snapshot is revalidated.
 
 [Run the free preview in GitHub Actions](https://github.com/unitedideas/pending-medicare-behavioral-health-action) when you want the same validated sample written into a workflow without an Apify account, token, email, or payment. The Action only invokes Apify after `preview` is explicitly set to `false` with a buyer-owned token and a charge cap of at least `$12.25`.
 
